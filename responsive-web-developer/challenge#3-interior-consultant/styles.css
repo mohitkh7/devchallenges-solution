@@ -1,0 +1,249 @@
+*, *::before, *::after {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #181719;
+    color: #fff;
+    font-family: Poppins, sans-serif;
+    min-height: 100vh;
+}
+
+.full-height-grow {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container {
+    max-width: 1200px;
+    margin: 0px auto;
+    padding: 10px;
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li {
+    padding: 10px 0;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li.logo {
+    border: 2px solid #fff;
+    padding: 10px;
+    font-family: "Crimson Pro", serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 14px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+}
+
+nav ul li.spacer {
+    flex: 1;
+}
+
+nav ul li.items {
+    width: auto;
+    margin-left: 40px;
+    text-align: center;
+    order: 3;
+}
+
+.items, .btn {
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    color: #FFFFFF;
+}
+
+.btn {
+    font-size: 25px;
+    display: none;
+}
+
+nav ul li.active {
+    font-weight: bold;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+} 
+
+nav ul li.btn.show i:before {
+    content: '\f00d';
+}
+
+.content {
+    flex: 1 0 auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 40px auto;
+}
+
+.text-content {
+    flex: 1;
+}
+
+.text-content > .text-title {
+    font-family: Lora, serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 48px;
+    line-height: 61px;
+    color: #FFFFFF;
+}
+
+.text-content > .subtitle {
+    font-family: Montserrat, Poppins, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    color: #FFFFFF;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding-right: 180px;
+}
+
+.text-content > .link {
+    font-family: Montserrat, Poppins, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 22px;
+}
+
+
+.img-content {
+    flex: 1;
+    margin-top: 50px;
+}
+
+.card {
+    box-shadow: 0px 4px 4px #000;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 65%;
+    background-color: #181719;
+    position: relative;
+    bottom: 90px;
+    left: 80px;
+    z-index: 5;
+    margin: 0 auto;
+}
+
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.profile-img {
+    border-radius: 50%;
+    flex: 20;
+    height: 75px;
+    width: 75px;
+    margin: 10px 20px;
+}
+
+.profile > section {
+    flex: 80;
+}
+
+.profile-name {
+    font-family: Montserrat, Poppins, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+}
+
+.profile-role {
+    font-family: Montserrat, Poppins, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #828282;
+}
+
+.summary {
+    font-family: Lora, serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 31px;
+
+    color: #FFFFFF;
+}
+.img {
+    width: 100%;
+    height: auto;
+}
+
+footer {
+    flex-shrink: 0;
+    font-family: Montserrat, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    text-align: center;
+    color: #A9A9A9;
+}
+
+@media all and (max-width: 900px) {
+    nav ul li.items {
+        width: 100%;
+    }
+
+    nav ul li.btn {
+        display: block;
+    }
+
+    nav ul li.items {
+        display: none;
+    }
+
+    nav ul li.items.show {
+        display: block;
+    }
+
+    .content {
+        flex-direction: column;
+    }
+
+    .content .subtitle {
+        padding-right: 40px;
+    }
+
+    .img-content {
+        margin-top: 40px;
+    }
+}

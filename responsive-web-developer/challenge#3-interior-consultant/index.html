@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+  maximum-scale=5" />
+  <link rel="icon" href="devchallenges.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Montserrat&family=Lora&family=Crimson+Pro&display=swap" rel="stylesheet" />
+  <link href="./styles.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Interior Consultant</title>
+</head>
+<body>
+  <div class="container full-height-grow">
+    <header>
+      <nav>
+        <ul>
+          <li class="logo">This Interior</li>
+          <li class="spacer"></li>
+          <li class="items active"><a href="#">Home</a></li>
+          <li class="items"><a href="#">Collection</a></li>
+          <li class="items"><a href="#">About</a></li>
+          <li class="items"><a href="#">Contact</a></li>
+          <li class="btn" id="toggleIcon">
+            <a href="#">
+              <i class="fa fa-bars"></i>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="content">
+      <section class="text-content">
+        <section class="text-title">Modern Interior</section>
+        <section class="subtitle">A full-Service residential & commercial interior design and staging company offering professional organizing & eco-services.</section>
+        <section class="link">Read More &rarr;</section>
+      </section>
+      <section class="img-content">
+        <img class="main-img img" src="./photo1.png" />
+        <div class="card">
+          <div class="profile">
+            <img class="profile-img" src="./photo2.png" />
+            <section>
+              <p class="profile-name">Aliza Webber</p>
+              <p class="profile-role">Interior Designer</p>
+            </section>
+          </div>
+          <div class="summary">
+            Designed in 2020 by Aliza Webber
+          </div>  
+        </div>
+      </section>
+    </div>
+    <footer>
+      created by <u><b>mohitkh7</b></u> - devchallenges.io
+    </footer>
+  </div>
+</body>
+<script>
+  window.onload = function () {
+    // fetch all nav menu items
+    var items = document.getElementsByClassName('items');
+    // on click of hameburger menu icon
+    document.getElementById('toggleIcon').onclick = function() {
+      document.getElementById('toggleIcon').classList.toggle('show');
+      for (var i = 0; i < items.length; i++) {
+        items[i].classList.toggle('show');
+      }
+    };
+  };
+</script>
+</html>

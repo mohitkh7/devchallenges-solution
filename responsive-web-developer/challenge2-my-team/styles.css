@@ -1,0 +1,136 @@
+body {
+    font-family: "Poppins", sans-serif;
+    margin: 0 30px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+}
+
+header > .title {
+    flex: 1;
+    font-family: "PT Serif", serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 48px;
+    letter-spacing: -0.045em;
+
+    color: #000000;
+}
+
+header > .content {
+    flex: 1;
+}
+
+header > .content > div:nth-child(1) {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    /* identical to box height */
+    text-transform: uppercase;
+    color: #000000;
+}
+
+header > .content > div:nth-child(2) {
+    margin-top: 15px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.team {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.team > .person {
+    flex: 0 0 27%;
+    display: flex;
+}
+
+.person > div > .person-img {
+    max-width: 100%;
+    height: auto;
+}
+
+.person > div > .person-name {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #000000;
+}
+
+.person > .person-role {
+    font-family: "PT Serif", serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: #000000;
+    writing-mode: vertical-rl;
+}
+
+footer > p {
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    text-align: center;
+    color: #BDBDBD;
+}
+
+footer {
+    min-height: 40px;
+    margin-top: auto;
+}
+
+@media (min-width: 992px) {
+    body {
+        max-width: 960px;
+        margin: auto;
+    }
+
+    .team > .person:nth-child(3n+2) {
+        margin-top: 120px;
+    }
+}
+
+@media (max-width: 992px) {
+    header {
+        flex-direction: column;
+    }
+
+    header > .title {
+        margin-bottom: 30px;
+    }
+
+    .team > .person {
+        flex: 0 0 45%;
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .team > .person:nth-child(2n+2) {
+        margin-top: 60px;
+    }
+
+}

@@ -1,0 +1,120 @@
+*, *::before, *::after {
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: poppins, sans-serif;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+
+.container > * {
+    margin-top: 30px;
+}
+
+header {
+    width: 50%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header > * {
+    margin-top: 20px;
+}
+
+figure {
+    width: 50%;
+}
+
+.profile-details {
+    text-align: center;
+}
+
+.profile-details .main-text {
+    font-family: Montserrat, Poppins, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1.5em;
+    color: #4E5150;
+    margin-bottom: 5px;
+}
+
+.profile-details .sub-text {
+    font-family: Montserrat, Poppins, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 0.8em;
+    color: #A9A9A9;
+}
+
+.count-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.info {
+    background-color: #E5E5E5;
+    border-radius: 12px;
+    padding: 10px 30px;
+    margin: auto 20px;
+    display: inline-block;
+    text-align: center;
+}
+
+.info .main-text {
+    font-size: 1.125em;
+    font-style: Montserrat, Poppins, sans-serif;
+    font-weight: 600;
+    color: #4E5150;
+}
+
+.info .sub-text {
+    font-style: Montserrat, Poppins, sans-serif;
+    font-weight: 600;
+    color: #BDBDBD;
+    text-transform: capitalize;
+}
+
+main {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 1em;
+}
+
+.img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+img[src="./photo1.png"] {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+img[src="./photo2.png"] {
+    grid-area: 1 / 2 / span 1 / span 2;
+}
+
+img[src="./photo3.png"] {
+    grid-area: 2 / 1 / span 1 / span 2;
+}
+
+img[src="./photo4.png"] {
+    grid-area: 2 / 3 / span 2 / span 1;
+}
+
+footer {
+    font-family: Montserrat, Poppins, sans-serif;
+    color: #B9BDCF;
+    text-align: center;
+    padding: 10px;
+}

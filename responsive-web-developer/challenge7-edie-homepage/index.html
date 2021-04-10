@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+  maximum-scale=5" />
+  <link rel="icon" href="devchallenges.png" />
+  <link rel="shortcut icon" type="image/x-icon" href="https://devchallenges.io/" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Montserrat&family=Heebo&display=swap"
+    rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link href="./style.css" rel="stylesheet" />
+  <title>Edie's Home</title>
+</head>
+
+<body>
+  <!-- navigation menu -->
+  <nav>
+    <ul class="menu">
+      <li class="menu__logo">Edie</li>
+      <li class="menu__spacer"></li>
+      <li class="menu__items active"><a href="#header">Home</a></li>
+      <li class="menu__items"><a href="#service">Services</a></li>
+      <li class="menu__items"><a href="#work">Our Works</a></li>
+      <li class="menu__items"><a href="#review">Clients</a></li>
+      <li class="menu__items"><a href="#footer">Contact</a></li>
+      <li class="menu__btn" id="toggle">
+        <a href="#">
+          <span class="material-icons" id="toggleIcon">menu</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <section id="header" class="header container">
+    <p class="header__question">Unhappy with your website?</p>
+    <h1 class="header__title">We create beautiful and fast web services</h1>
+  </section>
+  <img class="header-image" src="heroImage.jpg" />
+  <section id="about" class="about container">
+    <h1 class="about__title">Story, emotion and purpose</h1>
+    <p class="about__description">We help transform your ideas into real world application that will outperform your
+      toughest
+      competition and help you startegic goals in short period of time.
+    </p>
+    <div class="contact">
+      <p class="contact__question">Want us to contact you?</p>
+      <div class="contact__form">
+        <input type="email" placeholder="Email" />
+        <button>Join</button>
+      </div>
+    </div>
+  </section>
+  <!-- services cards -->
+  <section id="service" class="service container">
+    <p class="section-title">We offer high<br /> demand services</p>
+    <div class="card-group">
+      <div class="card">
+        <div class="card__icon card__icon--blue">
+          <span class="material-icons">edit</span>
+        </div>
+        <p class="card__title">UI/UX Design</p>
+        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt assumenda qui
+          amet </p>
+        <button class="card__action">Get started</button>
+      </div>
+      <div class="card">
+        <div class="card__icon card__icon--green">
+          <span class="material-icons">code</span>
+        </div>
+        <p class="card__title">Front End</p>
+        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt assumenda qui
+          amet </p>
+        <button class="card__action">Get started</button>
+      </div>
+      <div class="card">
+        <div class="card__icon card__icon--red">
+          <span class="material-icons">list</span>
+        </div>
+        <p class="card__title">Back End</p>
+        <p class="card__description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt assumenda qui
+          amet </p>
+        <button class="card__action">Get started</button>
+      </div>
+    </div>
+  </section>
+  <!-- project work -->
+  <section id="work" class="container">
+    <p class="section-title">Good design means <br />good business</p>
+    <div class="project-group">
+      <figure class="project">
+        <img class="project__image" src="smarthome.jpg" />
+        <figcaption>
+          <p class="project__type">Full stack application</p>
+          <p class="project__name">Smart home dashboard</p>
+        </figcaption>
+      </figure>
+      <figure class="project">
+        <img class="project__image" src="onboard.png" />
+        <figcaption>
+          <p class="project__type">UI / UX Design</p>
+          <p class="project__name">Onbaord application</p>
+        </figcaption>
+      </figure>
+      <figure class="project">
+        <img class="project__image" src="booking.png" />
+        <figcaption>
+          <p class="project__type">Mobile application</p>
+          <p class="project__name">Booking system</p>
+        </figcaption>
+      </figure>
+      <figure class="project">
+        <img class="project__image" src="juice-product.png" />
+        <figcaption>
+          <p class="project__type">Front end application on</p>
+          <p class="project__name">Juice product homepage</p>
+        </figcaption>
+      </figure>
+    </div>
+    <div class="work-link">
+      <a href="#">see more &rarr;</a>
+    </div>
+  </section>
+  <!-- team -->
+  <section id="team" class="container">
+    <div class="team-content">
+      <p class="team-content__title">Meet the team</p>
+      <p class="team-content__heading">We are chilled and a laidback team</p>
+      <p class="team-content__description">Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
+    </div>
+    <div class="team-image-group">
+      <img src="./person3.png" />
+      <img src="./person1.png" />
+      <img src="./person2.png" />
+    </div>
+  </section>
+  <!-- client review -->
+  <section id="review" class="review container">
+    <blockquote class="review__content">"Fast and outstanding results. Edie understands their customer's needs. They
+      have a young and talented team."</blockquote>
+    <div class="review__person">
+      <img class="review__person-image" src="person4.png" />
+      <div class="review__person-details">
+        <p class="review__person-name">Carlos Tran</p>
+        <p class="review__person-company">The Decorate Gatsby</p>
+      </div>
+    </div>
+  </section>
+  <!-- footer -->
+  <footer id="footer">
+    <section class="container">
+      <div class="footer__link">
+        <p class="footer__link-item"><a href="#header">Home</a></p>
+        <p class="footer__link-item"><a href="#service">Services</a></p>
+        <p class="footer__link-item"><a href="#work">Our Works</a></p>
+        <p class="footer__link-item"><a href="#review">Clients</a></p>
+        <p class="footer__link-item"><a href="#footer">Contact</a></p>
+      </div>
+      <div class="footer__social">
+        <p class="footer__social-brand">Edie</p>
+        <p>
+          <img class="footer__social-icon" src="./instagram.svg" />
+          <img class="footer__social-icon" src="./linkedin.svg" />
+          <img class="footer__social-icon" src="./twitter.svg" />
+        </p>
+      </div>
+      <div class="contact">
+        <p class="contact__question">Want us to contact you?</p>
+        <div class="contact__form">
+          <input type="email" placeholder="Email" />
+          <button>Join</button>
+        </div>
+      </div>
+    </section>
+    <p class="footer__creator">created by <b>mohitkh7</b></p>
+  </footer>
+</body>
+
+<script>
+  window.onload = function () {
+    // fetch all nav menu items
+    var items = document.getElementsByClassName('menu__items');
+    var toggleBtn = document.getElementById('toggle');
+    var toggleIcon = document.getElementById('toggleIcon')
+    // on click of hameburger menu icon
+    toggleBtn.onclick = function() {
+      toggleIcon.textContent = toggleIcon.textContent == 'menu' ? 'close': 'menu';
+      for (var i = 0; i < items.length; i++) {
+        items[i].classList.toggle('show');
+      }
+    };
+  };
+</script>
+
+</html>

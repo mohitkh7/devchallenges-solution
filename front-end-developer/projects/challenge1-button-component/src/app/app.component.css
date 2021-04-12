@@ -1,0 +1,23 @@
+* {
+    font-family: poppins, sans-serif;
+}
+
+.example-description {
+    font-size: .75rem;
+    color: #333;
+}
+
+.flex-container {
+    display: flex;
+    margin: 2rem;
+}
+
+.flex-item {
+    flex: 0 0 25%;
+}
+
+footer {
+    margin-top: 4rem;
+    text-align: center;
+    color: #bdbdbd;
+}

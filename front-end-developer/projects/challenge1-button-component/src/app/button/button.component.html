@@ -1,0 +1,10 @@
+<button 
+    class="btn btn-{{color}} btn-{{size}}"
+    [class.btn-outline]="variant === 'outline'"
+    [class.btn-text]="variant === 'text'"
+    [class.btn-disable-shadow]="disableShadow"
+    [class.btn-disabled]="disabled">
+    <span class="material-icons" *ngIf="startIcon">{{ startIcon }}&nbsp;</span>
+    <ng-content></ng-content>
+    <span class="material-icons" *ngIf="endIcon">&nbsp;{{ endIcon }}</span>  
+</button>

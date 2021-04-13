@@ -68,3 +68,6 @@ node_modules/
 
 # dotenv environment variables file
 .env
+
+# public folder which hosts code to firebase
+public/

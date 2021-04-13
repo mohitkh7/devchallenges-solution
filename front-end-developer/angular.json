@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/challenge1-button-component",
+            "outputPath": "../public/front-end-developer/challenge1-button-component",
             "index": "projects/challenge1-button-component/src/index.html",
             "main": "projects/challenge1-button-component/src/main.ts",
             "polyfills": "projects/challenge1-button-component/src/polyfills.ts",

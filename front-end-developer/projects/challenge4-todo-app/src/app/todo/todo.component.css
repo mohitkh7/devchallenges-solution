@@ -1,0 +1,60 @@
+.container {
+    max-width: 500px;
+    margin: 0px auto;
+    padding: 1rem;
+    font-family: raleway, sans-serif;
+}
+
+.title {
+    font-size: 2.25rem;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: -0.1rem;
+    color: #333;
+}
+
+.menu {
+    margin-top: 2.5rem;
+    border-bottom: 1px solid #bdbdbd;
+    --bs-gutter-x: 0;
+}
+
+.menu__item {
+    text-align: center;
+    font-family: monteserrat, raleway, sans-serif;
+    font-size: .875rem;
+    padding: 1.125rem;
+    font-weight: 600;
+    color: #333;
+    cursor: pointer;
+}
+
+.menu__item.active {
+    border-bottom: 2px solid #2f80ed;
+}
+
+.todo-form {
+    margin: 1.125rem auto;
+}
+
+.striked {
+    text-decoration: line-through;
+}
+
+.delete-all {
+    margin: 1rem auto;
+}
+
+span {
+    vertical-align: middle;
+}
+
+.todo-item {
+    margin: 0.5rem auto;
+}
+
+.delete-todo-icon {
+    color: #bdbdbd;
+    vertical-align: middle;
+    cursor: pointer;
+}

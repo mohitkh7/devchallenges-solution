@@ -118,6 +118,123 @@
           }
         }
       }
+    },
+    "challenge4-todo-app": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/challenge4-todo-app",
+      "sourceRoot": "projects/challenge4-todo-app/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "../public/front-end-developer/challenge4-todo-app",
+            "baseHref": "/front-end-developer/challenge4-todo-app/",
+            "index": "projects/challenge4-todo-app/src/index.html",
+            "main": "projects/challenge4-todo-app/src/main.ts",
+            "polyfills": "projects/challenge4-todo-app/src/polyfills.ts",
+            "tsConfig": "projects/challenge4-todo-app/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/challenge4-todo-app/src/favicon.ico",
+              "projects/challenge4-todo-app/src/assets"
+            ],
+            "styles": [
+              "projects/challenge4-todo-app/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/challenge4-todo-app/src/environments/environment.ts",
+                  "with": "projects/challenge4-todo-app/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "challenge4-todo-app:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "challenge4-todo-app:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "challenge4-todo-app:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/challenge4-todo-app/src/test.ts",
+            "polyfills": "projects/challenge4-todo-app/src/polyfills.ts",
+            "tsConfig": "projects/challenge4-todo-app/tsconfig.spec.json",
+            "karmaConfig": "projects/challenge4-todo-app/karma.conf.js",
+            "assets": [
+              "projects/challenge4-todo-app/src/favicon.ico",
+              "projects/challenge4-todo-app/src/assets"
+            ],
+            "styles": [
+              "projects/challenge4-todo-app/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/challenge4-todo-app/tsconfig.app.json",
+              "projects/challenge4-todo-app/tsconfig.spec.json",
+              "projects/challenge4-todo-app/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/challenge4-todo-app/e2e/protractor.conf.js",
+            "devServerTarget": "challenge4-todo-app:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "challenge4-todo-app:serve:production"
+            }
+          }
+        }
+      }
     }
   },
   "defaultProject": "challenge1-button-component"

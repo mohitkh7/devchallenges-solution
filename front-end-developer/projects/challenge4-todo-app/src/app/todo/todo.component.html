@@ -1,0 +1,25 @@
+<div class="container">
+    <h2 class="title">#todo</h2>
+    <div class="menu row">
+        <div class="menu__item col-4" [ngClass]="{'active': state === displayState.ALL}" (click)="changeState(displayState.ALL)">All</div>
+        <div class="menu__item col-4" [ngClass]="{'active': state === displayState.ACTIVE}" (click)="changeState(displayState.ACTIVE)">Active</div>
+        <div class="menu__item col-4" [ngClass]="{'active': state === displayState.COMPLETED}" (click)="changeState(displayState.COMPLETED)">Completed</div>
+    </div>
+    <form class="todo-form row g-0" *ngIf="state !== displayState.COMPLETED" (submit)="onAdd()" ngNativeValidate>
+        <div class="col-9">
+            <input type="text" name="todoDetail" [(ngModel)]="todoDetail"  placeholder="add details" class="form-control" minlength="1" required/>
+        </div>
+        <div class="d-grid col-2 offset-1">
+            <button type="submit" class="btn btn-primary">Add</button>
+        </div>
+    </form>
+
+    <div class="form-check todo-item" *ngFor="let todo of filterTodo(todoList); let i = index">
+        <input class="form-check-input" type="checkbox" [checked]="todo.isCompleted" id="{{i}}" (change)="onTodoToggle(todo.id)" />
+        <label class="form-check-label" for="{{i}}" [class.striked]="todo.isCompleted">{{ todo.detail }}</label>
+        <span class="delete-todo-icon material-icons-outlined float-end" *ngIf="state === displayState.COMPLETED" (click)="deleteTodo(todo.id)">delete</span>
+    </div>
+    <div class="delete-all float-end" *ngIf="state === displayState.COMPLETED">
+        <button class="btn btn-danger" (click)="onDeleteAll()"><span class="material-icons-outlined">delete</span> delete all</button>
+    </div>
+</div>

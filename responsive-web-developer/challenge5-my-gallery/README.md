@@ -36,7 +36,7 @@
 
 ## Overview
 
-![screenshot](./demo-screenshot.png)
+![screenshot](./demo-screenshot.PNG)
 
 My Gallery is a responsive web page inspired by Instagram profile page to display images. It uses CSS grid feature for alignment.
 

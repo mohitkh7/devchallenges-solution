@@ -36,7 +36,7 @@
 
 ## Overview
 
-![screenshot](./demo-screenshot.png)
+![screenshot](./demo-screenshot.PNG)
 
 My Team is a responsive web page to list out all team members with their images and designation.
 

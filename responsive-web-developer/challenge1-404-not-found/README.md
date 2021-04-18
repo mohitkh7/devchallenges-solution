@@ -36,7 +36,7 @@
 
 ## Overview
 
-![screenshot](./demo-screenshot.png)
+![screenshot](./demo-screenshot.PNG)
 
 404 not found is an essential page for every website. This is a responsive 404 page built with HTML/CSS.
 

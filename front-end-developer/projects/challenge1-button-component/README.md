@@ -36,7 +36,7 @@
 
 ## Overview
 
-![screenshot](./screenshots/demo-screenshot.png)
+![screenshot](./screenshots/demo-screenshot.PNG)
 
 A reusable button with different possible states and design built using angular
 

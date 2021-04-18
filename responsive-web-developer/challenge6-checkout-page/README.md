@@ -36,7 +36,7 @@
 
 ## Overview
 
-![screenshot](./demo-screenshot.png)
+![screenshot](./demo-screenshot.PNG)
 
 A checkout page with a modern and minimal design suitable for all sort of e-commerce websites.
 

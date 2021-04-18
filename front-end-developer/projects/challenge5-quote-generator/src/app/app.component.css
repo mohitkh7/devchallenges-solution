@@ -1,0 +1,40 @@
+.container {
+    max-width: 1140px;
+    margin: 0px auto;
+    padding: 0 10px;
+    min-height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 100%;
+}
+
+header {
+    margin-top: 1rem;
+    text-align: right;
+}
+
+header > button {
+    background-color: transparent;
+    border: none;
+    font-family: raleway;
+    font-size: 1.125rem;
+    color: #4f4f4f;
+    cursor: pointer;
+}
+
+header > button:focus{
+    border:none;
+    outline: none;
+}
+
+span.material-icons {
+    vertical-align: middle;
+}
+
+footer > p {
+    text-align: center;
+    font-family: montserrat, poppins, sans-serif;
+    font-size: .875rem;
+    color: #828282;
+    padding: 10px 0;
+}

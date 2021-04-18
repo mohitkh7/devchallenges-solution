@@ -1,0 +1,25 @@
+/* You can add global styles to this file, and also import other style files */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: montserrat, poppins, sans-serif;
+}
+
+@media (max-width: 992px) {
+    html, body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    html, body {
+        font-size: 12px;
+    }
+}

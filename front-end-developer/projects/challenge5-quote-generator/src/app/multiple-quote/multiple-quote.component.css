@@ -1,0 +1,33 @@
+.quote__content {
+    max-width: 51rem;
+    margin: 4.5rem auto;
+    padding: 0 6.25rem;
+    font-family: raleway;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2.25rem;
+    line-height: 2.75rem;
+    color: #000000;
+
+    border-left: 8px solid #F7DF94;
+}
+
+.author {
+    max-width: 42rem;
+    margin: 0 auto;
+    padding: 2rem 2rem;
+    
+    font-family: raleway;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1.5rem;
+    line-height: 1.75rem;
+    color: #333;
+}
+
+@media (max-width: 768px) {
+    .quote__content {
+        padding-left: 6.25rem;
+        padding-right: 0;
+    }
+}

@@ -1,0 +1,14 @@
+<section class="quote">
+    <p class="quote__content" *ngIf="quote.quoteText">
+        "{{ quote.quoteText }}"
+    </p>
+    <div class="quote__author" routerLink="/quote/{{ quote.quoteAuthor }}">
+        <div class="quote__author-detail">
+            <p class="quote__author-detail__name">{{ quote.quoteAuthor }}</p>
+            <p class="quote__author-detail__genre ">{{ quote.quoteGenre }}</p>
+        </div>
+        <div class="quote__author-icon">
+            <span class="material-icons ">arrow_right_alt</span>
+        </div>
+    </div>
+</section>

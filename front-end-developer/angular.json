@@ -235,6 +235,123 @@
           }
         }
       }
+    },
+    "challenge5-quote-generator": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/challenge5-quote-generator",
+      "sourceRoot": "projects/challenge5-quote-generator/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "../public/front-end-developer/challenge5-quote-generator",
+            "baseHref": "/front-end-developer/challenge5-quote-generator/",
+            "index": "projects/challenge5-quote-generator/src/index.html",
+            "main": "projects/challenge5-quote-generator/src/main.ts",
+            "polyfills": "projects/challenge5-quote-generator/src/polyfills.ts",
+            "tsConfig": "projects/challenge5-quote-generator/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/challenge5-quote-generator/src/favicon.ico",
+              "projects/challenge5-quote-generator/src/assets"
+            ],
+            "styles": [
+              "projects/challenge5-quote-generator/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/challenge5-quote-generator/src/environments/environment.ts",
+                  "with": "projects/challenge5-quote-generator/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "challenge5-quote-generator:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "challenge5-quote-generator:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "challenge5-quote-generator:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/challenge5-quote-generator/src/test.ts",
+            "polyfills": "projects/challenge5-quote-generator/src/polyfills.ts",
+            "tsConfig": "projects/challenge5-quote-generator/tsconfig.spec.json",
+            "karmaConfig": "projects/challenge5-quote-generator/karma.conf.js",
+            "assets": [
+              "projects/challenge5-quote-generator/src/favicon.ico",
+              "projects/challenge5-quote-generator/src/assets"
+            ],
+            "styles": [
+              "projects/challenge5-quote-generator/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/challenge5-quote-generator/tsconfig.app.json",
+              "projects/challenge5-quote-generator/tsconfig.spec.json",
+              "projects/challenge5-quote-generator/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/challenge5-quote-generator/e2e/protractor.conf.js",
+            "devServerTarget": "challenge5-quote-generator:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "challenge5-quote-generator:serve:production"
+            }
+          }
+        }
+      }
     }
   },
   "defaultProject": "challenge1-button-component"

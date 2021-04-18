@@ -1,0 +1,10 @@
+<section class="author">
+    {{ author }}
+</section>
+<section class="quote">
+    <p class="quote__content" *ngFor="let quote of quoteList">
+        <ng-container *ngIf="quote && quote['quoteText']">
+            "{{ quote['quoteText'] }}"
+        </ng-container>
+    </p>
+</section>

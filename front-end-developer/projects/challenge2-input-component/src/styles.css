@@ -1,0 +1,19 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: poppins, sans-serif;
+}
+
+:root {
+    --gray1: #333;
+    --gray2: #4f4f4f;
+    --gray3: #828282;
+    --gray5: #e0e0e0;
+    --gray6: #f2f2f2;
+    --blue1: #2962ff;
+    --red1: #d32f2f;
+}

@@ -1,0 +1,84 @@
+<div class="container">
+  <h3>Inputs</h3>
+
+  <div class="flex-container">
+    <div class="flex-item">
+      <p class="example-description">&lt;Input /&gt;</p>
+      <app-input></app-input>
+    </div>
+  </div>
+
+  <div class="flex-container">
+    <div class="flex-item">
+      <p class="example-description">&lt;Input error /&gt;</p>
+      <app-input [error]="true"></app-input>
+    </div>
+  </div>
+
+  <div class="flex-container">
+    <div class="flex-item">
+      <p class="example-description">&lt;Input disabled /&gt;</p>
+      <app-input [disabled]=true></app-input>
+    </div>
+  </div>
+
+  <div class="flex-container">
+    <div class="flex-item">
+      <p class="example-description">&lt;Input helperText="Some interesting text" /&gt;</p>
+      <app-input helperText="Some interesting text"></app-input>
+    </div>
+    <div class="flex-item">
+      <p class="example-description">&lt;Input helperText="Some interesting text" error /&gt;</p>
+      <app-input helperText="Some interesting text" [error]="true"></app-input>
+    </div>
+  </div>
+
+  <div class="flex-container">
+    <div class="flex-item">
+      <p class="example-description">&lt;Input value="text" /&gt;</p>
+      <app-input value="text"></app-input>
+    </div>
+  </div>
+
+  <div class="flex-container">
+    <div class="flex-item">
+      <p class="example-description">&lt;Input startIcon /&gt;</p>
+      <app-input startIcon="call"></app-input>
+    </div>
+
+    <div class="flex-item">
+      <p class="example-description">&lt;Input endIcon /&gt;</p>
+      <app-input endIcon="lock"></app-input>
+    </div>
+  </div>
+
+  <div class="flex-container">
+    <div class="flex-item">
+      <p class="example-description">&lt;Input size="sm" /&gt;</p>
+      <app-input size="sm"></app-input>
+    </div>
+
+    <div class="flex-item">
+      <p class="example-description">&lt;Input size="md" /&gt;</p>
+      <app-input size="md"></app-input>
+    </div>
+  </div>
+
+  <div class="flex-container">
+    <div class="flex-item-full">
+      <p class="example-description">&lt;Input fullWidth/&gt;</p>
+      <app-input [fullWidth]=true></app-input>
+    </div>
+  </div>
+
+  <div class="flex-container">
+    <div class="flex-item-full">
+      <p class="example-description">&lt;Input multiline row="4"/&gt;</p>
+      <app-input [multiline]=true [row]=4></app-input>
+    </div>
+  </div>
+  
+  <footer>
+    <p>created by <b>mohitkh7</b></p>
+  </footer>
+</div>

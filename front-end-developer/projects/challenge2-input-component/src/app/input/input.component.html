@@ -1,0 +1,11 @@
+<div class="input-group">
+    <div class="input" [class.has-error]="error" [class.size-sm]="size == 'sm'" 
+        [class.disabled]="disabled" [class.full-width]="fullWidth">
+        <span *ngIf="startIcon" class="material-icons inline-icon start-icon">{{ startIcon }}</span>
+        <input *ngIf="!multiline" type="text" placeholder="placeholder" [value]="value" [disabled]="disabled"/>
+        <textarea *ngIf="multiline" [rows]="row" placeholder="placeholder" [value]="value" [disabled]="disabled"></textarea>
+        <span *ngIf="endIcon" class="material-icons inline-icon end-icon">{{ endIcon }}</span>
+    </div>
+    <div class="label">Label</div>
+    <div class="help-text">{{ helperText }}</div>
+</div>

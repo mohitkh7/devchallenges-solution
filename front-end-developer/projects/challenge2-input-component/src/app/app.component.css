@@ -1,0 +1,31 @@
+.container {
+    max-width: 1140px;
+    padding: 1rem;
+    margin: 0 auto;
+}
+
+.example-description {
+    font-family: "ubuntu mono", poppins, sans-serif;
+    font-size: .75rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.flex-container {
+    display: flex;
+    margin: 4rem 0;
+}
+
+.flex-item {
+    flex: 0 0 33%;
+}
+
+.flex-item-full {
+    flex: 1;
+}
+
+footer {
+    margin-top: 4rem;
+    text-align: center;
+    color: #bdbdbd;
+}

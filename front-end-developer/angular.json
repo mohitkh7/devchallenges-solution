@@ -470,6 +470,123 @@
           }
         }
       }
+    },
+    "challenge2-input-component": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/challenge2-input-component",
+      "sourceRoot": "projects/challenge2-input-component/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "../public/front-end-developer/challenge2-input-component",
+            "baseHref": "/front-end-developer/challenge2-input-component/",
+            "index": "projects/challenge2-input-component/src/index.html",
+            "main": "projects/challenge2-input-component/src/main.ts",
+            "polyfills": "projects/challenge2-input-component/src/polyfills.ts",
+            "tsConfig": "projects/challenge2-input-component/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/challenge2-input-component/src/favicon.ico",
+              "projects/challenge2-input-component/src/assets"
+            ],
+            "styles": [
+              "projects/challenge2-input-component/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/challenge2-input-component/src/environments/environment.ts",
+                  "with": "projects/challenge2-input-component/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "challenge2-input-component:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "challenge2-input-component:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "challenge2-input-component:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/challenge2-input-component/src/test.ts",
+            "polyfills": "projects/challenge2-input-component/src/polyfills.ts",
+            "tsConfig": "projects/challenge2-input-component/tsconfig.spec.json",
+            "karmaConfig": "projects/challenge2-input-component/karma.conf.js",
+            "assets": [
+              "projects/challenge2-input-component/src/favicon.ico",
+              "projects/challenge2-input-component/src/assets"
+            ],
+            "styles": [
+              "projects/challenge2-input-component/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/challenge2-input-component/tsconfig.app.json",
+              "projects/challenge2-input-component/tsconfig.spec.json",
+              "projects/challenge2-input-component/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/challenge2-input-component/e2e/protractor.conf.js",
+            "devServerTarget": "challenge2-input-component:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "challenge2-input-component:serve:production"
+            }
+          }
+        }
+      }
     }
   },
   "defaultProject": "challenge1-button-component"

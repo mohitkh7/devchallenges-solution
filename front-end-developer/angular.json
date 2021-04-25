@@ -14,6 +14,7 @@
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
             "outputPath": "../public/front-end-developer/challenge1-button-component",
+            "baseHref": "/front-end-developer/challenge1-button-component/",
             "index": "projects/challenge1-button-component/src/index.html",
             "main": "projects/challenge1-button-component/src/main.ts",
             "polyfills": "projects/challenge1-button-component/src/polyfills.ts",
@@ -348,6 +349,123 @@
           "configurations": {
             "production": {
               "devServerTarget": "challenge5-quote-generator:serve:production"
+            }
+          }
+        }
+      }
+    },
+    "challenge3-windbnb": {
+      "projectType": "application",
+      "schematics": {},
+      "root": "projects/challenge3-windbnb",
+      "sourceRoot": "projects/challenge3-windbnb/src",
+      "prefix": "app",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:browser",
+          "options": {
+            "outputPath": "../public/front-end-developer/challenge3-windbnb",
+            "baseHref": "/front-end-developer/challenge3-windbnb/",
+            "index": "projects/challenge3-windbnb/src/index.html",
+            "main": "projects/challenge3-windbnb/src/main.ts",
+            "polyfills": "projects/challenge3-windbnb/src/polyfills.ts",
+            "tsConfig": "projects/challenge3-windbnb/tsconfig.app.json",
+            "aot": true,
+            "assets": [
+              "projects/challenge3-windbnb/src/favicon.ico",
+              "projects/challenge3-windbnb/src/assets"
+            ],
+            "styles": [
+              "projects/challenge3-windbnb/src/styles.css"
+            ],
+            "scripts": []
+          },
+          "configurations": {
+            "production": {
+              "fileReplacements": [
+                {
+                  "replace": "projects/challenge3-windbnb/src/environments/environment.ts",
+                  "with": "projects/challenge3-windbnb/src/environments/environment.prod.ts"
+                }
+              ],
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "namedChunks": false,
+              "extractLicenses": true,
+              "vendorChunk": false,
+              "buildOptimizer": true,
+              "budgets": [
+                {
+                  "type": "initial",
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
+                },
+                {
+                  "type": "anyComponentStyle",
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
+                }
+              ]
+            }
+          }
+        },
+        "serve": {
+          "builder": "@angular-devkit/build-angular:dev-server",
+          "options": {
+            "browserTarget": "challenge3-windbnb:build"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "challenge3-windbnb:build:production"
+            }
+          }
+        },
+        "extract-i18n": {
+          "builder": "@angular-devkit/build-angular:extract-i18n",
+          "options": {
+            "browserTarget": "challenge3-windbnb:build"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/challenge3-windbnb/src/test.ts",
+            "polyfills": "projects/challenge3-windbnb/src/polyfills.ts",
+            "tsConfig": "projects/challenge3-windbnb/tsconfig.spec.json",
+            "karmaConfig": "projects/challenge3-windbnb/karma.conf.js",
+            "assets": [
+              "projects/challenge3-windbnb/src/favicon.ico",
+              "projects/challenge3-windbnb/src/assets"
+            ],
+            "styles": [
+              "projects/challenge3-windbnb/src/styles.css"
+            ],
+            "scripts": []
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/challenge3-windbnb/tsconfig.app.json",
+              "projects/challenge3-windbnb/tsconfig.spec.json",
+              "projects/challenge3-windbnb/e2e/tsconfig.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        },
+        "e2e": {
+          "builder": "@angular-devkit/build-angular:protractor",
+          "options": {
+            "protractorConfig": "projects/challenge3-windbnb/e2e/protractor.conf.js",
+            "devServerTarget": "challenge3-windbnb:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "challenge3-windbnb:serve:production"
             }
           }
         }

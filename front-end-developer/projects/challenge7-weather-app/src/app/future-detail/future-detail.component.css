@@ -1,0 +1,17 @@
+.future-data {
+    padding: 1.125em;
+    margin-bottom: 2em; 
+    text-align: center;
+}
+
+.future-data__icon {
+    display: block;
+    width: 4.5em;
+    height: 5em;
+    margin: 1em auto;
+}
+
+.future-data__temp {
+    display: flex;
+    justify-content: space-between;
+}

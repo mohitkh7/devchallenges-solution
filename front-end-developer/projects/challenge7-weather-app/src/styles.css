@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+    --primary-color: #e7e7eb;
+    --secondary-color: #a09fb1;
+    color: var(--primary-color);
+    font-family: Raleway, Poppins, sans-serif;
+    font-size: 16px;
+}
+
+html {
+    font-size: 14px; /* calc(1em + 1vw); */
+}
+
+/* || reset */
+button,
+input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+}
+
+/* || utilities */
+.icon {
+    font-size: inherit;
+    vertical-align: middle;
+}
+
+.dark-bg {
+    background: #100e1d;
+}
+
+.light-bg {
+    background: #1e213a;
+}
+
+.text-secondary {
+    color: #a09fb1;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.round-btn {
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+/* font size related */
+.fs-24 {
+    font-size: 24px;
+}
+
+.error-text {
+    color:lightcoral;
+    margin: 1em auto;
+}

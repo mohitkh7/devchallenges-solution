@@ -1,0 +1,5 @@
+.image {
+    width: inherit;
+    height: auto;
+    max-width: 150px;
+}

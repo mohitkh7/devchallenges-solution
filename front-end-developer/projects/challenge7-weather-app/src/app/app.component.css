@@ -1,0 +1,20 @@
+/* || sitewide alignment */
+.container {
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 100%;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .stats-container {
+        grid-template-columns: auto auto;
+    }
+}
+
+/* Extra Large devices (laptops/desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .container {
+        grid-template-columns: 30% 70%;
+    }
+}

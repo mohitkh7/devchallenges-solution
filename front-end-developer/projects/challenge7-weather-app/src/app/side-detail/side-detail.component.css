@@ -1,0 +1,58 @@
+/* || weather detail within side panel */
+.detail {
+    padding: 1.5em;
+    text-align: center;
+}
+
+.detail__location {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+.detail__search-for-places {
+    padding: .625em 1.125em;
+    background: #6E707A;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: var(--primary-color);
+}
+
+.detail__my-location {
+    background: #6E707A;
+    color: var(--primary-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.detail__icon {
+    margin-top: 2em;
+    margin-bottom: 2em; 
+}
+
+.detail__temp-value {
+    font-size: 7em;
+}
+.detail__temp-unit {
+    font-size: 3em;
+    font-weight: 100;
+}
+
+.detail__status {
+    margin-top: 1.5em;
+    color: #a09fb1;
+    font-size: 2.25em;
+}
+
+.detail__date {
+    margin-top: 4em;
+    color: #88869d;
+    font-size: 1.125em;
+}
+
+.detail__city {
+    margin-top: 2em;
+    margin-bottom: 4em;
+    color: #88869d;
+    font-size: 1.125em;
+}
+.material-icons {
+    font-size: inherit;
+}

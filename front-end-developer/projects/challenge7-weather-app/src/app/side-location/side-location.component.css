@@ -1,0 +1,59 @@
+/* || location selection within side panel */
+.location-selection {
+    padding: 1.5em;
+}
+
+.location-search {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 1em 0;
+}
+
+.input {
+    display: flex;
+    padding: .75em;
+    border: 1px solid var(--primary-color);
+    font-size: 1em;
+    line-height: 1.25em;
+}
+
+.input > input {
+    flex: 1;
+    color: inherit;
+}
+
+.input:hover,
+.input:focus-within {
+    border: 1px solid var(--secondary-color);
+}
+
+.inline-icon {
+    vertical-align: middle;
+    font-size: 1.25em;
+}
+
+.start-icon {
+    padding-right: .5em;
+}
+
+.location-search__button {
+    padding: .25em 1em;
+    background: #3C47E9;
+    color: var(--primary-color);
+}
+
+.location-search__button:active {
+    background: rgba(60, 71, 233, 0.7);
+}
+
+.location-option {
+    margin: 1.5em 0;
+    padding: 1.5em .75em;
+    border: 1px solid transparent;
+}
+
+.location-option:hover {
+    border: 1px solid #616475;
+    cursor: pointer;
+}

@@ -1,0 +1,20 @@
+.side-panel {
+    background-color: #1E213A;
+    /*
+    background-image: url('Cloud-background.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-blend-mode: lighten;
+    */
+}
+
+.fade {
+    transition: visibility 3s;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .side-panel {
+        min-height: 100%;
+    }
+}

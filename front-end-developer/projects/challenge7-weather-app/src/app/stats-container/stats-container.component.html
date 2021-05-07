@@ -1,0 +1,46 @@
+<h2 class="title">Today's Highlights</h2>
+<p *ngIf="isInitialState">Select a location to view weather highlights.</p>
+<div *ngIf="!isInitialState && isLoading">
+    <div class="fa-2x">
+        <i class="fas fa-spinner fa-spin"></i>
+    </div>
+</div>
+<div class="stats-container" *ngIf="!isInitialState && !isLoading">
+    <div class="stats light-bg">
+        <div class="stats__title">Wind Status</div>
+        <div class="stats__value">{{ weather.wind_speed | number: '1.0-1' }} mph</div>
+        <div class="stats__detail" title="{{ weather.wind_direction }} deg">
+            <button class="round-btn direction-icon" [style.transform]="'rotate(' + weather.wind_direction + 'deg)'">
+                <span class="material-icons icon">
+                    navigation
+                </span>
+            </button> &nbsp;&nbsp;{{ weather.wind_direction_compass }}
+        </div>
+
+    </div>
+    <div class="stats light-bg">
+        <div class="stats__title">Humidity</div>
+        <div class="stats__value">{{ weather.humidity | number: '1.0-0' }}%</div>
+        <section class="progress stats__detail">
+            <div class="progress__content progress__ticks">
+                <span>0</span>
+                <span>50</span>
+                <span>100</span>
+            </div>
+            <div class="progress__bar" [title]="weather.humidity">
+                <div class="progress__fill" [style.width.%]="weather.humidity">&nbsp;</div>
+            </div>
+            <div class="progress__content text-right">
+                %
+            </div>
+        </section>
+    </div>
+    <div class="stats light-bg">
+        <div class="stats__title">Visibility</div>
+        <div class="stats__value">{{ weather.visibility | number: '1.0-1' }} Miles</div>
+    </div>
+    <div class="stats light-bg">
+        <div class="stats__title">Air Pressure</div>
+        <div class="stats__value">{{ weather.air_pressure | number: '1.0-1' }} mb</div>
+    </div>
+</div>

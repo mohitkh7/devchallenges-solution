@@ -1,0 +1,34 @@
+<div class="detail">
+    <div class="detail__location">
+        <button class="detail__search-for-places" (click)="onSearch()">Search for places</button>
+        <button class="round-btn detail__my-location" (click)="onGetGPSLocation()" title="get GPS location">
+            <span class="material-icons icon">my_location</span>
+        </button>
+    </div>
+    <div class="error-text" *ngIf="error">
+        {{ error?.message }}
+    </div>
+    <ng-container *ngIf="isInitialState">
+        <p>Select a location to view weather details.</p>
+    </ng-container>
+    <ng-container *ngIf="!isInitialState && isLoading">
+        <div class="fa-2x">
+            <i class="fas fa-spinner fa-spin"></i>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="!isInitialState && !isLoading">
+        <div class="detail__icon">
+            <!-- <img src="assets/Shower.png" /> -->
+            <app-weather-icon [state]="weather.weather_state_name"></app-weather-icon>
+        </div>
+        <div class="detail__temp">
+            <span class="detail__temp-value">{{ weather.the_temp | temperature: tempUnit }}</span>
+            <span class="detail__temp-unit">&deg;{{ tempUnit }}</span>
+        </div>
+        <div class="detail__status">{{ weather.weather_state_name }}</div>
+        <div class="detail__date">Today &middot; {{ weather.applicable_date | date: 'E, d MMM'}}</div>
+        <div class="detail__city">
+            <span class="material-icons icon">location_on</span> {{ weather.location }}
+        </div>
+    </ng-container>
+</div>

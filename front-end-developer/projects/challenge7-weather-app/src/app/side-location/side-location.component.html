@@ -1,0 +1,23 @@
+<div class="location-selection">
+    <div class="text-right">
+        <span class="material-icons icon fs-24" (click)="onClose()" title="close">highlight_off</span>
+    </div>
+    <div class="location-search">
+        <div class="location-search__input input">
+            <span class="material-icons inline-icon start-icon icon">search</span>
+            <input type="text" placeholder="search location" [(ngModel)]="query" />
+        </div>
+        <button class="location-search__button" (click)="onSearch()">Search</button>
+    </div>
+    <div *ngIf="isLoading">
+        <div class="fa-2x">
+            <i class="fas fa-spinner fa-spin"></i>
+        </div>
+    </div>
+    <div class="error-text" *ngIf="error">
+        {{ error?.message }}
+    </div>
+    <div class="location-option" *ngFor="let option of locationOptions" (click)="onSelect(option)">
+        {{ option.title }}
+    </div>
+</div>

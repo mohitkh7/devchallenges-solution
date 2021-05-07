@@ -1,0 +1,9 @@
+<div class="future-data light-bg" *ngIf="weather">
+    <div>{{ weather.applicable_date | date: 'E, d MMM'}}</div>
+    <app-weather-icon class="future-data__icon" [state]="weather.weather_state_name"></app-weather-icon>
+    <div class="future-data__temp">
+        <span class="">{{ weather.max_temp | temperature: tempUnit}} &deg;{{ tempUnit }}</span>
+        &nbsp;&nbsp;
+        <span class="text-secondary">{{ weather.min_temp | temperature: tempUnit}} &deg;{{ tempUnit }}</span>
+    </div>
+</div>

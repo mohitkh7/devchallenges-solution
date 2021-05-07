@@ -1,0 +1,32 @@
+.container {
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr auto;
+}
+
+.main-container {
+    padding: 1.5em 4em;
+}
+
+/* || temperature mode selection */
+.temp-btn-container {
+    margin-bottom: 2em;
+    text-align: right;
+}
+
+.temp-btn {    
+    margin-left: .75em;
+    background: #585676;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+
+.temp-btn--active {
+    background: var(--primary-color);
+    color: #110e3c;
+}
+
+footer {
+    margin-top: auto;
+    text-align: center;
+}

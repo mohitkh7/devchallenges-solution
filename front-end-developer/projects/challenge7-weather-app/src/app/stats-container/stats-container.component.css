@@ -1,0 +1,74 @@
+/* || highlighted statistics of today's weather record */
+.title {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.stats {
+    padding: 1.375em 0 2.5em 0;
+    text-align: center;
+}
+
+.stats__title {
+    margin-bottom: .5em;
+    font-size: 1em;
+}
+
+.stats__value {
+    font-size: 4em;
+    font-weight: bold;
+}
+
+.stats__detail {
+    width: 70%;
+    margin: 1.5em auto 0 auto;
+}
+
+.stats-container {
+    display: grid;
+    grid-template-columns: auto;
+    row-gap: 4em;
+    column-gap: 4em;
+}
+
+/* || direction icon */
+.direction-icon {
+    background: #585676;
+    color: inherit;
+    font-size: 1em;
+}
+
+.direction-icon:focus {
+    transition: 1s rotate 360;
+}
+
+/* || Progress bar */
+.progress__content {
+    padding: 0 2%;
+    color: var(--secondary-color);
+    font-size: .75em;
+    font-weight: bold;
+}
+
+.progress__ticks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.progress__bar {
+    border-radius: 5em;
+    margin: .125em 0;
+    background: var(--primary-color);
+}
+
+.progress__fill {
+    border-radius: inherit;
+    background: #ffec65;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .stats-container {
+        grid-template-columns: auto auto;
+    }
+}

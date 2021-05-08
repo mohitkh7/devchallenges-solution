@@ -1,0 +1,16 @@
+<div class="container bg-blue">
+    <main>
+        <section class="header">
+            <div class="header__title">Country Quiz</div>
+        </section>
+        <section class="content">
+            <app-quiz (quizComplete)="showResult($event)" *ngIf="displayMode === 'QUIZ'"></app-quiz>
+            <app-result (startQuiz)="startQuiz()" [correctAnswerCount]="correctAnswerCount" *ngIf="displayMode === 'RESULT'"></app-result>
+        </section> 
+    </main>
+    <footer>
+        <p>
+            created by @mohitkh7
+        </p>
+    </footer>
+</div>

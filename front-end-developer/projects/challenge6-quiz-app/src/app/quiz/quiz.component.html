@@ -1,0 +1,35 @@
+<div class="text-right">
+    <img class="quiz__img" src="assets/undraw_adventure_4hum 1.svg" />
+</div>
+
+<ng-container *ngIf="question">
+    <div *ngIf="question?.flag">
+        <img [src]="question.flag" class="quiz__flag" />
+    </div>
+    <div class="quiz__question">
+        {{ question?.text }}
+    </div>
+    <div class="quiz__option">
+        <div class="option" [class]="getClass(i)" (click)="chooseAnswer(i)"
+            *ngFor="let option of question.options; let i=index">
+            <div class="option__label">{{ LABELS[i] }}</div>
+            <div class="option__text">{{ option }}</div>
+            <div class="option__symbol" *ngIf="selectedOption != null">
+                <span class="material-icons option__icon">
+                    <ng-container *ngIf="i == question.answer">check_circle_outline</ng-container>
+                    <ng-container *ngIf="i == selectedOption && (i != question.answer)">highlight_off</ng-container>
+                </span>
+            </div>
+            <!-- <div class="option__symbol">
+            <span class="material-icons option__icon">highlight_off</span>
+        </div> -->
+        </div>
+    </div>
+    <div class="quiz__action">
+        <p class="quiz__count">{{ currentQuestionCount }} / {{ totalQuestionCount}}</p>
+        <button class="btn btn__next" (click)="nextQuestion()">
+            <span *ngIf="currentQuestionCount == totalQuestionCount">See Result</span>
+            <span *ngIf="currentQuestionCount != totalQuestionCount">Next</span>
+        </button>
+    </div>
+</ng-container>

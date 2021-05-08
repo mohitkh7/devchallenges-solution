@@ -1,0 +1,32 @@
+.result {
+    text-align: center;
+}
+
+.result__image {
+    width: 50%;
+    height: auto;
+}
+
+.result__title {
+    color: #2f527b;
+}
+
+.result__text {
+    color: #2f527b;
+}
+
+.result__count {
+    color: #60bf88;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.result__btn {
+    border: 2px solid #2f527b;
+    background: #fff;
+    color: #2f527b;
+}
+
+.result__btn:active {
+    background: #ededed;
+}

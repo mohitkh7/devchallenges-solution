@@ -1,0 +1,78 @@
+
+/* || apply */
+.apply__back a{
+    text-decoration: none;
+}
+
+.apply__title {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 21px;
+  
+    text-transform: uppercase;
+  
+    color: #B9BDCF;
+}
+  
+.apply__detail {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 21px;
+  
+    color: #334680;
+}
+  
+/* || job detail */
+.job-detail__title {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    color: #334680;
+}
+  
+.job-detail__time {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #B7BCCE;
+}
+  
+.job-detail__grid {
+    display: flex;
+}
+  
+.job-detail__company {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: #334680;
+}
+  
+.job-detail__location {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    color: #B9BDCF;
+}
+  
+.job-detail__description {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 150%;
+  
+    color: #334680;
+}

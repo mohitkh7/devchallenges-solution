@@ -1,0 +1,33 @@
+<div class="type-filter ps-2">
+    <div class="form-check">
+        <input class="form-check-input" type="checkbox" 
+            value="true" id="full-time"
+            [formControl]="fullTimeCheck" />
+        <label class="form-check-label" for="full-time">
+            Full time
+        </label>
+    </div>
+</div>
+<div class="location-filter mt-4">
+    <h6 class="location-filter__title">Location</h6>
+    <div class="location-filter__input my-3">
+        <div class="input-group input-with-icon shadow-sm input-no-border">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id=""><i class="fa fa-globe"></i></span>
+            </div>
+            <input type="text" class="form-control" 
+                placeholder="City, state, zipcode or country" 
+                aria-label="location" aria-describedby="basic-addon1"
+                [formControl]="locationText">
+        </div>
+    </div>
+    <div class="location-filter__options ps-2 mb-3">
+        <div class="form-check mt-3" *ngFor="let loc of frequentLocations">
+            <input class="form-check-input" type="radio" name="locationRadio" id="radio-{{loc}}"
+                [value]="loc" [formControl]="locationRadio" />
+            <label class="form-check-label" for="radio-{{loc}}">
+                {{ loc }}
+            </label>
+        </div>
+    </div>
+</div>

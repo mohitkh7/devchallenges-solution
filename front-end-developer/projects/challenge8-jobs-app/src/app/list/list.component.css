@@ -1,0 +1,42 @@
+.job__body {
+    padding: .75rem;
+    cursor: pointer;
+}
+  
+.job__detail {
+    font-family: Roboto, Poppins, sans-serif;
+    color: var(--dark-blue);
+}
+  
+.job__company {
+    font-size: .75rem;
+    font-weight: bold;
+}
+  
+.job__title {
+    margin-top: .5em;
+    font-size: 1.125rem;
+}
+  
+.job__labels {
+    margin-top: .75em;
+}
+  
+.job__sub-detail {
+    margin-top: 1rem;
+    font-size: .75rem;
+    color: #B9BDCF;
+}
+  
+.label {
+    display: inline-block;
+    border: 1px solid var(--dark-blue);
+    border-radius: .25rem;
+    padding: .375rem .5rem;
+    font-size: .75rem;
+    font-weight: bold;
+}
+
+.pagination-container {
+    text-align: right;
+}

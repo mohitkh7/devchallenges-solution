@@ -1,0 +1,17 @@
+.search {
+    min-height: 10em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 1em;
+    background: url('../../assets/backgroundImg.png') center no-repeat;
+}
+
+.search-box {
+    display: flex;
+    background-color: #fff;
+}
+
+.search-box__input {
+    flex-grow: 1;
+}

@@ -1,0 +1,53 @@
+/* You can add global styles to this file, and also import other style files */
+
+
+/* || override bootstrap */
+:root {
+    --dark-blue: #336480;
+}
+  
+* {
+    font-family: Poppins, sans-serif;
+}
+  
+.bg-grey {
+    background: #f6f7fb;
+}
+  
+/* common utils */
+.img-placeholder {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: #f2f2f2;
+    color: #bdbdbd;
+    font: .75rem Roboto;
+}
+
+/* || input border-less with-icon */
+.input-no-border input,
+.input-no-border .input-group-text {
+    border: 0;
+}
+  
+.input-with-icon .input-group-text {
+    padding-right: 1px;
+    background: #fff;
+    color: #B9BDCF;
+}
+  
+.input-with-icon input {
+    border-left: 0;
+}
+  
+.input-with-icon .form-control:focus {
+    box-shadow: none;
+}
+  
+.input-with-icon .fa {
+    line-height: 1.5;
+}
+  

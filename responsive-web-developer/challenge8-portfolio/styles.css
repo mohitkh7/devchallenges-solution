@@ -1,0 +1,232 @@
+:root {
+    --black1: #333;
+    --gray1: #4f4f4f;
+    --gray2: #828282;
+    --gray3: #f2f2f2;
+    --gray4: #c4c4c4;
+    --blue1: #2f80ed;
+    --blue2: #0a58ca;
+}
+
+/* reset global css */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--gray3);
+    font-family: Montserrat, poppins, sans-serif;
+}
+
+/* || utilities */
+.img {
+    border-radius: 1rem;
+}
+
+.img--flat {
+    border-radius: 0;
+}
+
+.card {
+    margin-bottom: 1.5rem;
+    border-radius: .75rem;
+    box-shadow: 0 .125rem .25rem rgba(66, 66, 66, .15);
+}
+
+.card-title {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: var(--gray1);
+}
+
+.no-anchor-style {
+    color: var(--gray1);
+    text-decoration: none;
+}
+
+/* || profile */
+.profile__img {
+    max-height: 200px;
+}
+.profile__contact {
+    padding: .5rem 0;
+}
+
+.profile__name {
+    font-weight: 600;
+    font-size: 1.5rem;
+    color: var(--gray1);
+}
+
+.profile__title {
+    font-size: 1.125rem;
+    color: var(--gray2);
+}
+
+.profile__contact {
+    font-size: 1.125rem;
+    color: var(--gray1);
+}
+
+.profile__description {
+    padding: 1rem 0 .5rem 0;
+    font-size: 1.125rem;
+    color: var(--gray2);
+}
+
+/* || Skills */
+.skills__title {
+    margin-bottom: 1rem;
+}
+
+.skill__name {
+    font-size: 1rem;
+    color: var(--gray1);
+}
+
+/* || progress bar */
+.progress {
+    height: .5rem;
+    background: var(--gray4);
+    border-radius: .5rem;
+}
+
+.progress-bar {
+    height: 100%;
+    background-color: var(--blue1);
+    border-radius: .5rem;
+    transition: width 3s;
+}
+
+.project {
+    height: 100%;
+}
+
+.project > .card-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.project__description {
+    flex-grow: 2;
+}
+
+.project__img {
+    width: 100%;
+    height: auto;
+}
+
+/* project card */
+.project__tags {
+    margin: 1.25rem 0;
+    color: var(--gray1);
+}
+
+.project__title {
+    font-size: 1.5rem;
+    color: var(--black1);
+}
+
+.project__description {
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    color: var(--gray2);
+}
+
+/* || jobs */
+.job {
+    display: flex;
+}
+
+.job__left-section {
+    flex-basis: 20%;
+}
+
+.job__right-section {
+    flex-basis: 80%;
+    padding-left: 5%;
+}
+
+.job__period {
+    font-size: .875rem;
+    color: var(--gray2);
+}
+
+.job__title {
+    margin-top: .75rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    color: var(--black1);
+}
+
+.job__description {
+    color: var(--gray2);
+}
+
+/* buttons */
+.btn {
+    border-radius: .75rem;
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
+
+.btn--flat {
+    border-radius: .25rem;
+}
+
+.btn--default {
+    border: 1px solid var(--gray1);
+    color: var(--gray1);
+}
+
+.btn--default:hover {
+    border: 1px solid var(--blue1);
+    color: var(--blue1);
+}
+
+.btn--fill {
+    background-color: var(--blue1);
+    color: white;
+}
+
+.btn--fill:hover {
+    background-color: #4791f1;
+    color: white;
+}
+
+.btn--border {
+    border: 1px solid var(--blue1);
+    color: var(--blue1);
+}
+
+.btn--border:hover {
+    background: #2f80ed10;
+    color: var(--blue1);
+}
+
+footer > p {
+    font-size: .75rem;
+    text-align: center;
+    color: var(--gray2);
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (min-width: 768px) {
+    .profile__head {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .profile__contact {
+        padding: 0;
+    }
+
+    .project__img {
+        max-height: 160px;
+        object-fit: cover;
+    }
+}

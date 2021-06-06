@@ -1,0 +1,16 @@
+[
+    {
+        "company": "Infosys",
+        "position": "Specialist Programmer",
+        "description": "Involved in various phases of SDLC including requirement gathering, modeling, analysis, architecture design, prototyping, development & testing.",
+        "period": "Jun 2019 - Present",
+        "imgUrl": "https://cdn.iconscout.com/icon/free/png-256/infosys-2850045-2370783.png"
+    },
+    {
+        "company": "Spoken Tutorial, IIT-Bombay",
+        "position": "Summer Intern",
+        "description": "As an Intern, developed a custom module from scratch to automate the calculation of honorarium payable to all external contributors of the Spoken Tutorial Project with a feature to track the progress of an honorarium.",
+        "period": "May 2018 - Jul 2018",
+        "imgUrl": "https://fossee.in/digital-india/images/logos/spoken_logo.png"
+    }
+]

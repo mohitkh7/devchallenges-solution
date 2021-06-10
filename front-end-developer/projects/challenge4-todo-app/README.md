@@ -12,7 +12,7 @@
       Demo
     </a>
     <span> | </span>
-    <a href="https://github.com/mohitkh7/devchallenges-solution/tree/master/front-end-developer/challenge4-todo-app/">
+    <a href="https://github.com/mohitkh7/devchallenges-solution/tree/master/front-end-developer/projects/challenge4-todo-app/">
       Solution
     </a>
     <span> | </span>

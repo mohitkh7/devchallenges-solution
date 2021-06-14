@@ -8,6 +8,19 @@
       "**/.git/**",
       "**/.github/**",
       "**/*.md/**"
+    ],
+    "redirects": [
+      {
+        "source": "/",
+        "destination": "/responsive-web-developer/challenge8-portfolio/",
+        "type": 301
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/responsive-web-developer/challenge1-404-not-found/index.html"
+      }
     ]
   }
 }

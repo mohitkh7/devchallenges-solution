@@ -1,0 +1,10 @@
+{
+  "lambda": {
+    "role": "image-uploader-backend-executor",
+    "name": "image-uploader-backend",
+    "region": "us-east-1"
+  },
+  "api": {
+    "id": "5igj35vd2j"
+  }
+}

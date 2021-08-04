@@ -1,0 +1,31 @@
+{
+  "name": "image-uploader-backend",
+  "version": "1.0.0",
+  "description": "backend node application for devchallenges full-stack challenge1 image uploader",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node local-server.js",
+    "init-claudia": "claudia generate-serverless-express-proxy --express-module app",
+    "create-api": "claudia create --handler lambda.handler --deploy-proxy-api --region us-east-1",
+    "update-api": "claudia update"
+  },
+  "keywords": [
+    "devchallenges",
+    "node-server",
+    "node-to-s3"
+  ],
+  "author": "mohitkh7",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.931.0",
+    "aws-serverless-express": "^3.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "multer": "^1.4.2"
+  },
+  "devDependencies": {
+    "claudia": "^5.13.1"
+  }
+}

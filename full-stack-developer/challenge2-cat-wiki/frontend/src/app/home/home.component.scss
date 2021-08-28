@@ -1,0 +1,108 @@
+$link-color: #29150799;
+$secondary-color: #291507;
+
+.link {
+    text-transform: uppercase;
+    color: $link-color;
+}
+
+.h-bar {
+    margin-top: .5rem;
+    margin-bottom: 2rem;
+    height: .25rem;
+    width: 60px;
+    background-color: #4D270C;
+    border-radius: 2rem;
+}
+
+/* search section */
+.search {
+    background: url("/assets/HeroImagesm.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.search__logo {
+    width: 80%;
+    height: auto;
+}
+
+.search__para {
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+/* breeds section */
+.breeds {
+    background: #E3E1DC;
+    border-radius: 0 0 1rem 1rem;
+    color: $secondary-color;
+}
+.breeds__top {
+    font-weight: 500;
+}
+
+.breeds__title {
+    font-weight: 700;
+    color: $secondary-color;
+}
+
+/* cat */
+.cat:hover > p {
+    text-decoration: underline;
+}
+.cat__name {
+    margin-top: 1rem;
+    font-weight: 600;
+    color: $secondary-color;
+}
+
+/* Description section */
+.description__title {
+    font-weight: 700;
+}
+
+.description__text {
+    font-weight: 500;
+    text-align: justify;
+}
+
+.description__images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 1rem;
+}
+
+.description__images > img:nth-child(1) {
+    grid-area: 1 / 1 / 2 / 4;
+}
+
+.description__images > img:nth-child(2) {
+    grid-area: 2 / 2 / 4 / 4;
+}
+
+.description__images > img:nth-child(3) {
+    grid-area: 1 / 4 / 3 / 6;
+}
+
+/* autocomplete search input */
+.ng-autocomplete {
+    width: auto;
+}
+
+.ng-autocomplete {
+    ::ng-deep .autocomplete-container {
+        ::ng-deep .input-container {
+            ::ng-deep input {
+                border-radius: 4rem !important;
+            }
+        }
+
+        ::ng-deep .suggestions-container, ::ng-deep .not-found {
+            margin-top: .75rem;
+            border-radius: 1rem;
+        }
+    }
+}

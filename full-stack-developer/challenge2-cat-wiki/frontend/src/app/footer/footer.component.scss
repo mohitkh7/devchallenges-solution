@@ -1,0 +1,23 @@
+footer {
+    border-radius: 2rem 2rem 0 0;
+    margin-top: 1rem;
+    padding: 1rem 1rem;
+    background-color: #000;
+    color: #fff;
+}
+.footer__text {
+    font-size: .75rem;
+    margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+    footer {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .footer__text {
+        font-size: 1rem;
+        margin-top: 0;
+    }
+}

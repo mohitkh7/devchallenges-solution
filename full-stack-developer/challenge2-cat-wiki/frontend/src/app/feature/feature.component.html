@@ -1,0 +1,9 @@
+<div class="feature row my-3" title="{{ feature_name }} is {{ feature_value }} out of 5">
+    <div class="feature__name col-sm-3">
+        <b>{{ feature_name }}:</b>
+    </div>
+    <div class="feature__value col-sm-6 row align-items-center">
+        <div class="col bar bar-fill mx-2" *ngFor="let v of fill_bars"></div>
+        <span class="col bar bar-empty mx-2"  *ngFor="let v of empty_bars"></span>
+    </div>
+</div>

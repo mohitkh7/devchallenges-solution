@@ -1,0 +1,102 @@
+<nav aria-label="breadcrumb" class="mb-4">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item" aria-current="page"><a routerLink="/">Home</a></li>
+        <li class="breadcrumb-item" aria-current="page"><a routerLink="/list">Breeds</a></li>
+        <li class="breadcrumb-item active" aria-current="page">{{ breedName }}</li>
+    </ol>
+</nav>
+
+<!-- Error Block -->
+<ng-container *ngIf="errorMsg">
+    <div class="alert alert-danger" role="alert">
+        {{ errorMsg }}
+    </div>
+</ng-container>
+<!-- // Error Block -->
+
+<!-- Details Block-->
+<div class="details-container row" *ngIf="breedDetail">
+    <section class="photo col-md-3 mb-4">
+        <img class="img-fluid img--round" src="{{ breedDetail.image?.url }}" alt="image of {{ breedDetail.name }}">
+    </section>
+    <div class="info col-md-8 offset-md-1">
+        <h1 class="info__title">{{ breedDetail.name }}</h1>
+        <p class="info__description">{{ breedDetail.description }}</p>
+        <div class="property row my-3">
+            <b class="property__name col-sm-3">Temperament:</b>
+            <span class="property__value col-sm-9">{{ breedDetail.temperament }}</span>
+        </div>
+        <div class="property row my-3">
+            <b class="property__name col-sm-3">Origin:</b>
+            <span class="property__value col-sm-9">{{ breedDetail.origin }}</span>
+        </div>
+        <div class="property row my-3">
+            <b class="property__name col-sm-3">Life Span:</b>
+            <span class="property__value col-sm-9">{{ breedDetail.life_span }} years</span>
+        </div>
+        <app-feature class="property" [feature_name]="'Adaptability'" [feature_value]="breedDetail.adaptability">
+        </app-feature>
+        <app-feature class="property" [feature_name]="'Affection Level'" [feature_value]="breedDetail.affection_level">
+        </app-feature>
+        <app-feature class="property" [feature_name]="'Child Friendly'" [feature_value]="breedDetail.child_friendly">
+        </app-feature>
+        <app-feature class="property" [feature_name]="'Grooming'" [feature_value]="breedDetail.grooming">
+        </app-feature>
+        <app-feature class="property" [feature_name]="'Intelligence'" [feature_value]="breedDetail.intelligence">
+        </app-feature>
+        <app-feature class="property" [feature_name]="'Health issues'" [feature_value]="breedDetail.health_issues">
+        </app-feature>
+        <app-feature class="property" [feature_name]="'Social needs'" [feature_value]="breedDetail.social_needs">
+        </app-feature>
+        <app-feature class="property" [feature_name]="'Stranger friendly'"
+            [feature_value]="breedDetail.stranger_friendly"></app-feature>
+        <div class="property row my-3">
+            <b class="property__name col-sm-3">Links:</b>
+            <span class="property__value col-sm-9">
+                <a [href]="breedDetail.wikipedia_url" target="_blank">Wikipedia</a>,
+                <a [href]="breedDetail.cfa_url" target="_blank">CFA</a>,
+                <a [href]="breedDetail.vcahospitals_url" target="_blank">Vcahospitals</a>,
+                <a [href]="breedDetail.vetstreet_url" target="_blank">Vetstreet</a>
+            </span>
+        </div>
+    </div>
+</div>
+<!-- // Details -->
+
+<!-- Loading Placeholder -->
+<ng-container *ngIf="isBreedDetailLoading">
+    <div class="details-container row">
+        <section class="photo--placeholder col-md-3 mb-4 loading" style="height: 10rem;">
+        </section>
+        <div class="info col-md-8 offset-md-1">
+            <h1 class="info__title--placeholder loading" style="width: 40%; height: 3rem"></h1>
+            <p class="info__description--placeholder loading" style="height: 6rem"></p>
+            <div *ngFor="let prop of [null, null, null, null, null, null, null, null]">
+                <div class="property--placeholder loading my-3" style="height: 2rem">
+                </div>
+            </div>
+        </div>
+    </div>
+</ng-container>
+<!-- // Loading Placeholder -->
+
+<div class="photos mt-5" *ngIf="breedDetail">
+    <h2>Other Photos</h2>
+    <div *ngIf="imageList$ | withLoading | async as imageList">
+        <div class="photos-container row" *ngIf="imageList.value">
+            <div class="col-md-3 col-6" *ngFor="let image of imageList.value; let i = index">
+                <img class="img img-fluid img--round my-2" [src]="image.url" alt="Gallery image {{ i + 1 }}" />
+            </div>
+        </div>
+        <ng-container *ngIf="imageList.loading">
+            <div class="photos-container row">
+                <div class="col-md-3 col-6" *ngFor="let image of [null, null, null, null, null, null, null, null]">
+                    <img class="img img-fluid my-2 img--placeholder loading" />
+                </div>
+            </div>
+        </ng-container>
+        <ng-container *ngIf="imageList.error">
+            <p class="text-danger">Something went wrong while fetching images.</p>
+        </ng-container>
+    </div>
+</div>

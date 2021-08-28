@@ -1,0 +1,47 @@
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item" aria-current="page"><a routerLink="/">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Breeds</li>
+    </ol>   
+</nav>
+
+<h2 class="list-title my-4">All Breeds</h2>
+<div *ngIf="breeds$ | withLoading | async as breeds">
+    <ng-container class="breed-list" *ngIf="!breeds.loading && !breeds.error">
+        <div class="breed row py-4" *ngFor="let breed of breeds.value | slice: (pageIndex - 1) * itemPerPage: pageIndex * itemPerPage; let i = index">
+            <div class="col-md-3 col-4">
+                <img [src]="breed.image?.url" class="img img-fluid img--round" loading="lazy"
+                    alt="image of {{ breed.name }} breed" />
+            </div>
+            <div class="col-8 offset-md-1">
+                <h1>{{ breed.name }}</h1>
+                <p>{{ breed.description }}</p>
+                <a class="clickable" [routerLink]="['/detail', breed.name]">View Details</a>
+            </div>
+        </div>
+        <nav aria-label="Page navigation">
+            <ul class="pagination justify-content-end">
+                <li class="page-item clickable" [class.active]="pageIndex == i" (click)="changePage(i)" *ngFor="let i of [1,2,3,4,5,6,7]">
+                    <span class="page-link">{{ i }}</span>
+                </li>
+            </ul>
+        </nav>
+    </ng-container>
+    <ng-container *ngIf="breeds.loading">
+        <div class="row py-4" *ngFor="let i of [1, 2, 3]">
+            <div class="col-3">
+                <div class="image loading" style="height:10rem;"></div>
+            </div>
+            <div class="col-9">
+                <h1 class="title loading" style="width: 40%; height:2rem;"></h1>
+                <p class="description loading" style="height:7.5rem;"></p>
+            </div>
+        </div>
+    </ng-container>
+    <ng-container *ngIf="breeds.error">
+        <div class="alert alert-danger" role="alert">
+            {{ breeds.error.error.message }}
+        </div>
+    </ng-container>
+</div>
+

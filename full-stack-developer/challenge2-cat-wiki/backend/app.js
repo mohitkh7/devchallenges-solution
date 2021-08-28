@@ -3,7 +3,6 @@ const indexRouter = require('./routes/index');
 const catsRouter = require('./routes/cats');
 
 const app = express();
-const port = process.env.port || 3000;
 
 // CORS Middleware
 app.use((req, res, next) => {
@@ -16,6 +15,4 @@ app.use((req, res, next) => {
 app.use('/', indexRouter);
 app.use('/cats', catsRouter);
 
-app.listen(port, () => {
-    console.log(`server listening on port: ${port}`);
-})
+module.exports = app;

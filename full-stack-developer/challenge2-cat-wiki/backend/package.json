@@ -4,12 +4,20 @@
   "description": "Node-Express backend app for cat-wiki app",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node local-server.js",
+    "init-claudia": "claudia generate-serverless-express-proxy --express-module app",
+    "create-api": "claudia create --handler lambda.handler --deploy-proxy-api --region us-east-1",
+    "update-api": "claudia update"
   },
   "author": "mohitkh7",
   "license": "ISC",
   "dependencies": {
+    "aws-serverless-express": "^3.4.0",
     "axios": "^0.21.1",
     "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "claudia": "^5.13.1"
   }
 }

@@ -1,0 +1,10 @@
+{
+  "lambda": {
+    "role": "cat-wiki-backend-executor",
+    "name": "cat-wiki-backend",
+    "region": "us-east-1"
+  },
+  "api": {
+    "id": "p4t21uam6h"
+  }
+}

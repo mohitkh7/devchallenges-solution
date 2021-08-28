@@ -6,6 +6,7 @@ router.get('/', (req, res) => {
 });
 
 router.get('/health', (req, res) => {
+    console.log('GET: Health');
     res.status(200).send('OK');
 });
 

@@ -20,7 +20,8 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/frontend",
+            "outputPath": "../../../public/full-stack-developer/challenge3-cat-wiki",
+            "baseHref": "/full-stack-developer/challenge3-cat-wiki/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",

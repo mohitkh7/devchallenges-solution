@@ -71,3 +71,15 @@ node_modules/
 
 # public folder which hosts code to firebase
 public/
+
+# python virtual environment
+env/
+venv/
+
+# Python Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Temporary directory
+temp/

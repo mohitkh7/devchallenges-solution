@@ -19,7 +19,7 @@ def post_image():
 	image = request.files["image"]
 	filename = secure_filename(image.filename)
 	image.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
-	return "uploaded!"
+	return render_template("success.html")
 
 @app.get("/")
 def home():

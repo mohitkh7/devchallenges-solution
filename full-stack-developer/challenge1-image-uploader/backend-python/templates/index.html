@@ -1,57 +1,14 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<title>Image Uploader</title>
-		<base href="/">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<link rel="icon" type="image/x-icon" href="favicon.ico">
-		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet" />
-		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
-		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css')}}" />
-	</head>
-	<body>
-		<section class="container">
-			<main>
-				<div class="card upload">
-					<h3>Upload your image</h3>
-					<p>File should be JPG, JPEG or PNG</p>
-					<div class="drag-n-drop">
-						<img src="{{ url_for('static', filename='image/image-upload-placeholder.svg')}}" />
-					</div>
-					<form action="/image" method="POST" enctype="multipart/form-data" class="button-group" style="display: flex; justify-content: center; gap: 2px; margin-top: 5px">
-						<input type="file" name="image" accept="image/png, image/jpg, image/jpeg"/>
-						<button type="submit" class="btn">Upload</button>
-					</form>
-				</div>
-				{#<div class="card progress" *ngIf="currState == State.PROGRESS">
-					<h3 class="title">Uploading...</h3>
-					<div class="bar">
-						<div class="move"></div>
-					</div>
-				</div>
-				<div class="card success" *ngIf="currState == State.SUCCESS">
-					<i class="fa fa-check-circle success__icon"></i>
-					<h3 class="title">Uploaded Successfully!</h3>
-					<img class="img" src="{{SERVER_URL}}{{ imageUrl }}" />
-					<div class="image-url">
-						<div class="image-url__text" id="image-url-text">{{ imageUrl }}</div>
-						<div class="image-url__copy">
-							<button class="btn" (click)="onCopy()">Copy Link</button>
-						</div>
-					</div>
-					<button class="btn" (click)="uploadAnotherFile()">Upload another file</button>
-				</div>
-				<div class="card fail" *ngIf="currState == State.FAIL">
-					<i class="fa fa-times-circle fail__icon"></i>
-					<h3 class="title">Uploading Failed!</h3>
-					<p class="fail__msg" *ngIf="failureMsg">{{ failureMsg }}</p>
-					<button class="btn" (click)="uploadAnotherFile()">Upload another file</button>
-				</div>#}
-			</main>
-			<footer>
-				<p>created by <b><u>Mohit Khandelwal</u></b></p>
-			</footer>
-		</section>
-	</body>
-</html>
+{% extends "base.html" %}
+{% block content %}
+<div class="card upload">
+	<h3>Upload your image</h3>
+	<p>File should be JPG, JPEG or PNG</p>
+	<div class="drag-n-drop">
+		<img src="{{ url_for('static', filename='image/image-upload-placeholder.svg')}}" />
+	</div>
+	<form action="/image" method="POST" enctype="multipart/form-data" class="button-group" style="display: flex; justify-content: center; gap: 2px; margin-top: 5px">
+		<input type="file" name="image" accept="image/png, image/jpg, image/jpeg"/>
+		<button type="submit" class="btn">Upload</button>
+	</form>
+</div>
+{% endblock %}

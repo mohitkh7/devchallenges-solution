@@ -17,30 +17,6 @@
 			<main>
 				{% block content %}
 				{% endblock %}
-				{#<div class="card progress" *ngIf="currState == State.PROGRESS">
-					<h3 class="title">Uploading...</h3>
-					<div class="bar">
-						<div class="move"></div>
-					</div>
-				</div>
-				<div class="card success" *ngIf="currState == State.SUCCESS">
-					<i class="fa fa-check-circle success__icon"></i>
-					<h3 class="title">Uploaded Successfully!</h3>
-					<img class="img" src="{{SERVER_URL}}{{ imageUrl }}" />
-					<div class="image-url">
-						<div class="image-url__text" id="image-url-text">{{ imageUrl }}</div>
-						<div class="image-url__copy">
-							<button class="btn" (click)="onCopy()">Copy Link</button>
-						</div>
-					</div>
-					<button class="btn" (click)="uploadAnotherFile()">Upload another file</button>
-				</div>
-				<div class="card fail" *ngIf="currState == State.FAIL">
-					<i class="fa fa-times-circle fail__icon"></i>
-					<h3 class="title">Uploading Failed!</h3>
-					<p class="fail__msg" *ngIf="failureMsg">{{ failureMsg }}</p>
-					<button class="btn" (click)="uploadAnotherFile()">Upload another file</button>
-				</div>#}
 			</main>
 			{% block footer %}
 			<footer>

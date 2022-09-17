@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block content %} 
+<div class="card fail">
+	<i class="fa fa-times-circle fail__icon"></i>
+	<h3 class="title">Uploading Failed!</h3>
+	<p class="fail__msg">{{ msg }}</p>
+	<a class="btn" href="{{ url_for('home') }}">Upload another file</a>
+</div>
+{% endblock %}

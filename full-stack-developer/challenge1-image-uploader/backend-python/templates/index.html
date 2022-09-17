@@ -6,7 +6,7 @@
 	<div class="drag-n-drop">
 		<img src="{{ url_for('static', filename='image/image-upload-placeholder.svg')}}" />
 	</div>
-	<form action="/image" method="POST" enctype="multipart/form-data" class="button-group" style="display: flex; justify-content: center; gap: 2px; margin-top: 5px">
+	<form action="{{ url_for('upload_image') }}" method="POST" enctype="multipart/form-data" class="button-group" style="display: flex; justify-content: center; gap: 2px; margin-top: 5px">
 		<input type="file" name="image" accept="image/png, image/jpg, image/jpeg"/>
 		<button type="submit" class="btn">Upload</button>
 	</form>

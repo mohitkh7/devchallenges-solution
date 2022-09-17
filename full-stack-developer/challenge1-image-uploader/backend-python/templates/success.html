@@ -9,9 +9,21 @@
 				{{ url_for('get_image', filename=filename, _external=True) }}
 			</div>
 			<div class="image-url__copy">
-				<button class="btn">Copy Link</button>
+				<button class="btn" onclick="copyToClipboard()">Copy Link</button>
 			</div>
 		</div>
 		<a class="btn" href="{{ url_for('home') }}">Upload another file</a>
 	</div>
+	<script>
+		function copyToClipboard() {
+			// Get the text field
+			var urlDiv = document.getElementById("image-url-text");
+
+			// Copy the text inside the text field
+			navigator.clipboard.writeText(urlDiv.textContent);
+
+			// Alert the copied text
+			console.log("Copied the text: " + urlDiv.textContent);
+		}	
+	</script>
 {% endblock %}

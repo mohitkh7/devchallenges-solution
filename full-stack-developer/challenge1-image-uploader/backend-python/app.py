@@ -3,6 +3,7 @@ import random, string
 
 from flask import Flask, request, render_template, send_from_directory, redirect, url_for
 from werkzeug.utils import secure_filename
+from werkzeug.exceptions import RequestEntityTooLarge 
 
 UPLOAD_FOLDER = "temp/"
 ALLOWED_EXTENSION = ('jpg', 'jpeg', 'png')
@@ -25,18 +26,23 @@ def upload_image():
 	"""
 	endpoint to upload image.
 	"""
-	if "image" not in request.files:
-		return render_template("fail.html", msg="Something went wrong!")
-	image = request.files["image"]
-	if not image or image.filename == '':
-		return render_template("fail.html",
-			msg="No File Selected")
-	if not is_file_allowed(image.filename):
-		return render_template("fail.html",
-			msg="Invalid file format found. Upload only " + ', '.join(ext for ext in ALLOWED_EXTENSION))
-	filename = secure_filename(image.filename)
-	image.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
-	return render_template("success.html", filename=filename)
+	try:
+		if "image" not in request.files:
+			return render_template("fail.html", error_msg="Something went wrong!")
+		image = request.files["image"]
+		if not image or image.filename == '':
+			return render_template("fail.html",
+				error_msg="No File Selected")
+		if not is_file_allowed(image.filename):
+			return render_template("fail.html",
+				error_msg="Invalid file format found. Upload only " + ', '.join(ext for ext in ALLOWED_EXTENSION))
+		filename = secure_filename(image.filename)
+		image.save(os.path.join(app.config["UPLOAD_FOLDER"], filename))
+		return render_template("success.html", filename=filename)
+	except RequestEntityTooLarge as exc:
+		return render_template("fail.html", error_msg="File size too large. Max file size allowed is 1 MB")
+	except Exception as exc:
+		return render_template("fail.html", error_msg="Something went wrong")
 
 @app.get("/")
 def home():

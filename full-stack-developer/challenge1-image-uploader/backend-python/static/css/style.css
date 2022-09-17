@@ -5,6 +5,7 @@
     --gray4: #bdbdbd;
     --gray6: #f2f2f2;
     --blue1: #2f80ed;
+    --red1: #ed4337;
 }
 
 body {
@@ -55,18 +56,12 @@ footer {
     padding-top: 2.5rem;
     padding-bottom: 2rem;
     background: #f6f8fb;
-    border: 1px dashed #97bef4;
+    border: 2px dashed #97bef4;
     border-radius: .75rem;
 }
 
 .drag-n-drop:hover {
-    border: 1px solid #97bef4;
-}
-
-.drag-n-drop>p {
-    padding-top: 2rem;
-    font-size: .75rem;
-    color: var(--gray4);
+    border: 2px solid #97bef4;
 }
 
 button {
@@ -85,50 +80,11 @@ button {
     transform: translateY(1px);
 }
 
-.bar {
-    height: .5rem;
-    background: var(--gray6);
-    border-radius: .5rem;
-}
-
-.move {
-    width: 30%;
-    height: 100%;
-    position: relative;
-    background: var(--blue1);
-    border-radius: inherit;
-    animation-name: loading;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    /* animation-direction: alternate; */
-    animation-timing-function: linear;
-}
-
-@keyframes loading {
-    0% {
-        left: 0%;
-        width: 0%;
-    }
-
-    10% {
-        left: 0%;
-        width: 10%;
-    }
-
-    50% {
-        left: 40%;
-        width: 20%;
-    }
-
-    90% {
-        left: 90%;
-        width: 10%;
-    }
-
-    100% {
-        left: 100%;
-        width: 0%;
-    }
+.upload-form{
+    display: flex; 
+    justify-content: center; 
+    gap: 2px; 
+    margin-top: 2rem;
 }
 
 .success {
@@ -172,7 +128,7 @@ button {
 
 .fail__icon {
     font-size: 3rem;
-    color: invert(#219653);
+    color: var(--red1);
 }
 
 .img {
@@ -181,5 +137,5 @@ button {
 }
 
 .fail__msg {
-    color: invert(#219653);
+    color: var(--red1);
 }

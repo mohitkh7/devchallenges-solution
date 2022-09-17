@@ -1,17 +1,15 @@
 import os
-import random, string
 
-from flask import Flask, request, render_template, send_from_directory, redirect, url_for
+from flask import Flask, request, render_template, send_from_directory
 from werkzeug.utils import secure_filename
 from werkzeug.exceptions import RequestEntityTooLarge 
-
-UPLOAD_FOLDER = "temp/"
-ALLOWED_EXTENSION = ('jpg', 'jpeg', 'png')
-MAX_FILE_SIZE = 1024 * 1024  # 1 MB
+from constants import UPLOAD_FOLDER, ALLOWED_EXTENSION, MAX_FILE_SIZE
+from utils import is_file_allowed
 
 app = Flask(__name__)
 app.config["UPLOAD_FOLDER"] = UPLOAD_FOLDER
 app.config['MAX_CONTENT_LENGTH'] = MAX_FILE_SIZE
+
 
 @app.get("/image/<string:filename>")
 def get_image(filename: str):
@@ -51,15 +49,6 @@ def home():
 	"""
 	return render_template("index.html")
 
-def is_file_allowed(filename) -> bool:
-	"""
-	checks whether given file is allowed to be uploaded or not
-	"""
-	return '.' in filename and \
-			filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSION
 
-def generate_id(length=6) -> str:
-	"""
-	generates a random alphanumeric string
-	"""
-	return ''.join(random.choices(string.ascii_letters + string.digits, k=length))
+if __name__ == "__main__":
+	app.run()

@@ -1,11 +1,13 @@
 {% extends "base.html" %}
 {% block content %} 	
-	<div class="card success" *ngIf="currState == State.SUCCESS">
+	<div class="card success">
 		<i class="fa fa-check-circle success__icon"></i>
 		<h3 class="title">Uploaded Successfully!</h3>
-		<img class="img" src="{{ url_for('image', image_id=image_id) }}" />
+		<img class="img" src="{{ url_for('get_image', filename=filename) }}" />
 		<div class="image-url">
-			<div class="image-url__text" id="image-url-text">{{ request.url_root[:-1] }}{{ url_for('image', image_id=image_id) }}</div>
+			<div class="image-url__text" id="image-url-text">
+				{{ url_for('get_image', filename=filename, _external=True) }}
+			</div>
 			<div class="image-url__copy">
 				<button class="btn">Copy Link</button>
 			</div>
